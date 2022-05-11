@@ -22,6 +22,11 @@ window.loadChart = function(json){
   const height = obj.height;
 
   var chart = c3.generate({
+    grid: {
+  x: {
+    show: true
+  }
+},
   size: {
     width: width,
     height: height
@@ -45,7 +50,7 @@ window.loadChart = function(json){
       //Code below could replace the 4 lines above
       //const obj = { id: clickedData.id, month: months[clickedData.index] };
       console.log(id, index, month);
-      c onsole.log(object);
+      console.log(object);
       //pass the parameter as JSON.stringify(param)
       FileMaker.PerformScript("Get Data", JSON.stringify(object));
     },
